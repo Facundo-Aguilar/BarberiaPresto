@@ -6,32 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>maquinas-presto</title>
 </head>
 <body>
-    <header>
-        <nav>
-        <div class="logo">
-        <img src="../img/logo.webp" alt="logo de la barberia">
+    <header x-data="{ open: false }" class="header">
+        <!-- Boton abrir -->
+        <button class="header__button-nav--open" x-on:click="open = true"><img src="../img/menu.png" alt="3 lineas blancas"></button>
+        <!-- Navegador -->
+        <nav class="nav" x-bind:class="open ? 'nav--show' : ''">
+            <div class="logo">
+                <img src="../img/logo.webp" alt="logo de la barberia">
+                </div>
+        <!-- Boton cerrar -->
+        <div class="nav__button" x-on:click="open = false">
+            <button class="header__button-nav--close"><img src="../img/menu.png" alt="3 lineas blancas"></button>
         </div>
-            <ul class="menu">
-                <li>
-                    <a href="../index.html">INICIO</a>
-                </li>
-                <li>
-                    <a href="patilleras.html">PATILLERAS</a>
-                </li>
-                <li>
-                    <a href="maquinas.html">MAQUINAS</a>
-                </li>
-                <li>
-                    <a href="barberos.html">BARBEROS</a>
-                </li>
-                <li>
-                    <a href="precios.html">PRECIOS</a>
-                </li>
-            </ul>
+        <!-- Menu -->
+        <ul class="nav__ul">
+            <li class="nav__item"><a href="../index.html" class="nav__link">INICIO</a></li>
+            <li class="nav__item"><a href="patilleras.html" class="nav__link">PATILLERAS</a></li>
+            <li class="nav__item"><a href="maquinas.html" class="nav__link">MAQUINAS</a></li>
+            <li class="nav__item"><a href="barberos.html" class="nav__link">BARBEROS</a></li>
+            <li class="nav__item"><a href="precios.html" class="nav__link">PRECIOS</a></li>
+        </ul>
         </nav>
+        <!-- Fin Navegador -->
     </header>
 
     <section class="portafolio">
