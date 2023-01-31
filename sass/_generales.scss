@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2? familia = Poppins: peso @ 700 &family= Secular+One & display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* nav */
+
+/* Estilos comunes */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    padding: 1rem;
+}
+
+.logo img{
+    height: 120px;
+}
+
+  /* Estilos móvil/celular */
+@media all and (max-width: 700px) {
+
+    /* Oculta el nav en la parte izquiera */
+    .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    transform: translateX(-100vw);
+    transition: 0.5s;
+    }
+
+    /* Muestra el nav */
+    .nav--show {
+    transform: translateX(0);
+    }
+
+    .nav__button {
+    text-align: right;
+    margin: 1rem;
+    }
+
+    .nav__ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .nav__link {
+    display: block;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family:'Secular One', sans-serif;
+    }
+}
+
+  /* Estilos Escritorio */
+@media all and (min-width: 701px) {
+
+    /* Oculta botón de abrir o cerrar */
+    .nav__button,
+    .header__button-nav--open {
+    display: none;
+    }
+
+    /* Adapta el nav en horizontal */
+    .nav__ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    }
+
+    .nav__link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    font-family:'Secular One', sans-serif;
+    }
+
+    .nav__link:hover {
+    background-color: blanchedalmond;
+    color: black;
+    }
+}

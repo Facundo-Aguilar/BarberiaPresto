@@ -1,0 +1,469 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2? familia = Poppins: peso @ 700 &family= Secular+One & display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* nav */
+/* Estilos comunes */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000000;
+  padding: 1rem;
+}
+
+.logo img {
+  height: 120px;
+}
+
+/* Estilos móvil/celular */
+@media all and (max-width: 700px) {
+  /* Oculta el nav en la parte izquiera */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    transform: translateX(-100vw);
+    transition: 0.5s;
+  }
+  /* Muestra el nav */
+  .nav--show {
+    transform: translateX(0);
+  }
+  .nav__button {
+    text-align: right;
+    margin: 1rem;
+  }
+  .nav__ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav__link {
+    display: block;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: "Secular One", sans-serif;
+  }
+}
+/* Estilos Escritorio */
+@media all and (min-width: 701px) {
+  /* Oculta botón de abrir o cerrar */
+  .nav__button,
+.header__button-nav--open {
+    display: none;
+  }
+  /* Adapta el nav en horizontal */
+  .nav__ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+  .nav__link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    font-family: "Secular One", sans-serif;
+  }
+  .nav__link:hover {
+    background-color: blanchedalmond;
+    color: black;
+  }
+}
+h1 {
+  font-family: "Secular One", sans-serif;
+  font-size: 75px;
+  text-align: center;
+}
+
+.subtitulo {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* slider de inicio */
+.slider {
+  width: 100%;
+  margin-top: 25px;
+  height: 900px;
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  -webkit-animation: cambio 10s infinite alternate linear;
+  animation: cambio 10s infinite alternate linear;
+  width: 400%;
+}
+
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+  75% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .slider, .slider ul, .slider img {
+    height: 100vh;
+  }
+}
+.icon1 img {
+  width: 100%;
+  height: 65px;
+}
+
+/* info sobre la barberia en inicio */
+.titulo {
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+main .sobre-nosotros {
+  padding: 30px 0 60px 0;
+}
+
+.contenedor-sobre-nosotros {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: bisque;
+}
+
+.imagen-about-us {
+  width: 48%;
+}
+
+.sobre-nosotros .contenido-textos {
+  width: 48%;
+}
+
+.contenido-textos h3 {
+  margin-bottom: 15px;
+  font-family: "Secular One", sans-serif;
+}
+
+.contenido-textos h3 span {
+  background: #000000;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  margin-right: 5px;
+}
+
+.contenido-textos p {
+  padding: 0px 0px 30px 15px;
+  font-weight: 300;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+}
+
+/* seccion patilleras */
+/* SECCION BARBEROS */
+.portafolio {
+  background: bisque;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.portafolio .maqui {
+  padding-bottom: 20px;
+}
+
+.galeria-port {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.person {
+  border-radius: 70px;
+}
+
+.imagen-port {
+  width: 21%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.imagen-port > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.hover-galeria {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(0);
+  background: rgba(35, 35, 36, 0.7);
+  transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hover-galeria img {
+  width: 50px;
+}
+
+.hover-galeria p {
+  color: #fff;
+}
+
+.imagen-port:hover .hover-galeria {
+  transform: scale(1);
+}
+
+/*seccion precios*/
+.contenedor1 {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 300px;
+  padding-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+.tabla {
+  width: 33%;
+  height: 550px;
+  margin: auto;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px 0px #343759;
+  padding: 60px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.tabla > h2 {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.tabla img {
+  width: 64px;
+  margin-bottom: 35px;
+}
+
+.tabla > h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.tabla > p {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.boton {
+  display: inline-block;
+  width: 150px;
+  padding: 12px;
+  background: #a5f059;
+  text-decoration: none;
+  color: #343759;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin: auto;
+}
+
+.tabla:hover {
+  background: bisque;
+  transition: 0.5s all;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .tabla {
+    width: 45%;
+    max-width: none;
+    margin-bottom: 40px;
+    flex-grow: initial;
+  }
+}
+@media screen and (max-width: 700px) {
+  .tabla {
+    width: 45%;
+    padding: 30px;
+  }
+  .tabla > h2 {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .tabla {
+    width: 85%;
+    padding: 20px;
+  }
+}
+/*:::::Pie de Pagina*/
+.pie-pagina {
+  width: 100%;
+  background-color: #000000;
+  font-family: "Poppins", sans-serif;
+}
+
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+  width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #484a4d;
+  text-align: center;
+  transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: aqua;
+}
+
+.pie-pagina .grupo-2 {
+  background-color: #0c0d0e;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}/*# sourceMappingURL=estilos.css.map */
