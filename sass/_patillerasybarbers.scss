@@ -21,9 +21,6 @@
     padding-bottom: 30px;
 }
 
-.person{
-    border-radius: 70px;
-}
 
 .imagen-port{
     width: 21%;
@@ -56,11 +53,12 @@
 }
 
 .hover-galeria img{
-    width: 50px;
+    width: 60px;
 }
 
 .hover-galeria p{
     color: #fff;
+    font-size: 25px;
 }
 
 .imagen-port:hover .hover-galeria{
@@ -69,4 +67,8 @@
 
 .maqui{
     font-size: 63px;
+}
+
+.person{
+    border-radius: 40px;
 }
