@@ -3,20 +3,21 @@
 
 .portafolio{
     background: bisque;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
     font-family:'Poppins', sans-serif;
 }
 
 .portafolio .maqui{
     padding-bottom: 20px;
+    padding-top: 30px;
 }
 
 .galeria-port{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding-top: 30px;
+    padding-top: 130px;
     padding-bottom: 30px;
 }
 
@@ -64,4 +65,8 @@
 
 .imagen-port:hover .hover-galeria{
     transform: scale(1);
+}
+
+.maqui{
+    font-size: 63px;
 }
